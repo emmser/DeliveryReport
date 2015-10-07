@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+
+{% block title %}Report{% endblock %}
+
+
+{% block body %}
+
+	<h1>Emma S.</h1>
+
+	<ul>
+	{% for sample in samples %}
+		<li><a href="{{ url_for('report', sample_id=sample.sample_id) }}">{{ sample.sample_id }}</a></li>		
+	{% endfor %}
+	</ul>
+
+{% endblock %}

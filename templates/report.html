@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+
+	
+
+{% block title %}DeliveryReport{% endblock %}
+
+
+{% block body %}
+
+	<h1>Delivery Report</h1>
+
+
+
+
+	<section id="samples">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Sample</th>
+              <th>Group</th>
+              <th>Customer</th>
+          
+            </tr>
+          </thead>
+
+          <tbody>
+            {% for sample in samples %}
+              <tr>
+                <td>{{ sample.sample_id }}</td>
+              	<td>{{ sample.group_id }}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </section>
+
+	
+
+{% endblock %}
+
